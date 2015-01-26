@@ -1,0 +1,93 @@
+<html>
+<head>
+	<meta name="viewport" content="Width=device-width, initial-scale=1.0"/>
+	<script src="js/bootstrap.min.js"></script>
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/truthMinistries.css" rel="stylesheet">
+</head>
+<body>
+	<div class="navbar navbar-inverse navbar-static-top">
+		<a href="#"><img src="img/Logo.png" style=" width:100px; height:79px; position:relative; top:0px; background-color:#DEFFFF;"></img></a>
+		<button class="navbar-toggle" data-toggle = "collapse" data-target=".navHeaderCollapse">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				</button>
+		<div class="collapse navbar-collapse navHeaderCollapse">
+			<ul class="nav navbar-nav navbar-left">
+				<li><a class="active" href="index.html">home</a></li>
+				<li class="dropdown" >
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">other pages<b class="caret"></b></a>
+					<ul class="dropdown-menu">
+					<li><a href="#">page1</a></li>
+					<li><a href="#">page2</a></li>
+					<li><a href="#">page3</a></li>
+					<li><a href="#">page4</a></li>
+					</ul>
+				</li>
+				<li><a href="Live.html">Live Talks</a></li>
+				<li><button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal"style="position:relative; top:7px;">
+					Contact</button></li>
+			</ul>
+		</div>
+			
+	</div>
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		  <div class="modal-dialog">
+			<div class="modal-content">
+			  <div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<img src="img/Logo.png" style=" width:100px; height:79px; position:relative; top:0px; background-color:#DEFFFF;"></img><h4 class="modal-title" id="myModalLabel"style="position:relative; text-align:center;">Contact Form</h4>
+			  </div>
+			  <div class="modal-body">
+				<form class="form-horizontal" role="form" action="email.php" method="post">
+				  <div class="panel">
+					
+				  </div>
+				  <div class="form-group">
+					<label class="control-label col-sm-2" for="Name">Name*</label>
+					<div class="col-sm-10">
+					  <input type="name" class="form-control" name="name" id="name" placeholder="your full Name">
+					</div>
+				  </div>
+				  <div class="form-group">
+					<label class="control-label col-sm-2" for="email">Email*</label>
+					<div class="col-sm-10"> 
+					  <input type="email" class="form-control" name="email" id="email" placeholder="Example@yahoo.com">
+					</div>
+				  </div>
+				  <div class="form-group">
+					<label class="control-label col-sm-2" for="subject">Subject*</label>
+					<div class="col-sm-10"> 
+					  <input type="text" class="form-control" name="subject" id="subject" placeholder="">
+					</div>
+				  </div>
+				  <div class="form-group">
+					  <label class="control-label col-sm-2" for="message">Message*</label>
+					  <div class="col-sm-10">
+					  <textarea class="form-control" rows="5" name="message" id="message"></textarea>
+				  </div>
+				  </div>
+				  <div class="form-group"> 
+					<div class="col-sm-offset-2 col-sm-10">
+					  <button type="submit" name="submit" class="btn btn-default">Submit</button>
+					</div>
+				  </div>
+				</form>
+			  </div>
+			  <div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				<button type="button" class="btn btn-primary">Save changes</button>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	<div class="row">
+		<div class="col-sm-6">
+		<iframe src="http://www.ustream.tv/embed/19445391?wmode=direct" style="border: 0 none transparent; position:relative; ;top:50px;" frameborder="no" width="100%" height="302"></iframe><br /><a href="http://www.ustream.tv/" style="padding: 2px 0px 4px; width: 400px; background: #ffffff; display: block; color: #000000; font-weight: normal; font-size: 10px; text-decoration: underline; text-align: center;" target="_blank"></a>
+		</div>
+	</div>
+		<script src="js/jquery-1.11.1.min.js"></script>
+		<script src="js/bootstrap.js"></script>
+</body>
+</html>

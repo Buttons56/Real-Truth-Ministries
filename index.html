@@ -1,0 +1,264 @@
+<?php
+
+session _start();
+
+
+$errors = isset($_SESSION['errors']) ? $_SESSION['errors'] : [];
+$errors = isset($_SESSION['fields']) ? $_SESSION['fields'] : [];
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<meta name="viewport" content="Width=device-width, initial-scale=1.0"/>
+	<script src="js/bootstrap.min.js"></script>
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/truthMinistries.css" rel="stylesheet">
+	
+		
+</head>
+<body>
+	<div class="navbar navbar-inverse navbar-static-top">
+		<a href="#"><img src="img/Logo.png" style=" width:100px; height:79px; position:relative; top:0px; background-color:#DEFFFF;"></img></a>
+		<button class="navbar-toggle" data-toggle = "collapse" data-target=".navHeaderCollapse">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				</button>
+		<div class="collapse navbar-collapse navHeaderCollapse">
+			<ul class="nav navbar-nav navbar-left">
+				<li><a class="active" href="#">home</a></li>
+				<li class="dropdown" >
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown">other pages<b class="caret"></b></a>
+					<ul class="dropdown-menu">
+					<li><a href="#">page1</a></li>
+					<li><a href="#">page2</a></li>
+					<li><a href="#">page3</a></li>
+					<li><a href="#">page4</a></li>
+					</ul>
+				</li>
+				<li><a href="Live.html">Live Talks</a></li>
+				<li><button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal"style="position:relative; top:7px;">
+					Contact</button></li>
+			</ul>
+		</div>
+			
+	</div>
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		  <div class="modal-dialog">
+			<div class="modal-content">
+			  <div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<img src="img/Logo.png" style=" width:100px; height:79px; position:relative; top:0px; background-color:#DEFFFF;"></img><h4 class="modal-title" id="myModalLabel"style="position:relative; text-align:center;">Contact Form</h4>
+			  </div>
+			  <div class="modal-body">
+				<form class="form-horizontal" role="form" action="email.php" method="post">
+				  <div class="panel">
+					
+				  </div>
+				  <div class="form-group">
+					<label class="control-label col-sm-2" for="Name">Name*</label>
+					<div class="col-sm-10">
+					  <input type="name" class="form-control" name="name" id="name" placeholder="your full Name">
+					</div>
+				  </div>
+				  <div class="form-group">
+					<label class="control-label col-sm-2" for="email">Email*</label>
+					<div class="col-sm-10"> 
+					  <input type="email" class="form-control" name="email" id="email" placeholder="Example@yahoo.com">
+					</div>
+				  </div>
+				  <div class="form-group">
+					<label class="control-label col-sm-2" for="subject">Subject*</label>
+					<div class="col-sm-10"> 
+					  <input type="text" class="form-control" name="subject" id="subject" placeholder="">
+					</div>
+				  </div>
+				  <div class="form-group">
+					  <label class="control-label col-sm-2" for="message">Message*</label>
+					  <div class="col-sm-10">
+					  <textarea class="form-control" rows="5" name="message" id="message"></textarea>
+				  </div>
+				  </div>
+				  <div class="form-group"> 
+					<div class="col-sm-offset-2 col-sm-10">
+					  <button type="submit" name="submit" class="btn btn-default">Submit</button>
+					</div>
+				  </div>
+				</form>
+			  </div>
+			  <div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				<button type="button" class="btn btn-primary">Save changes</button>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	<div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#myCarousel" data-slide-to="1"></li>
+    <li data-target="#myCarousel" data-slide-to="2"></li>
+    <li data-target="#myCarousel" data-slide-to="3"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+      <img src="img/Desert.jpg" alt="Chania"style="position:relative; margin:auto";>
+    </div>
+
+    <div class="item">
+      <img src="img/Hydrangeas.jpg" alt="Chania"style="position:relative; margin:auto";>
+    </div>
+
+    <div class="item">
+      <img src="img/Lighthouse.jpg" alt="Flower"style="position:relative; margin:auto";>
+    </div>
+
+    <div class="item">
+      <img src="img/Penguins.jpg" alt="Flower"style="position:relative; margin:auto";>
+    </div>
+  </div>
+
+  <!-- Left and right controls -->
+  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+		<div class="row">
+			<div class="col-md-4">
+				<div class="Block" >
+					<h2>Doctrine ...</h2>
+						<p>Sed eget tortor neque, pharetra modi nunc rutrum duis eros, at penatibus, quasi suspendisse risus sed nisl est. Quam eleifend velit. Etiam nisl, sed nulla 
+						pede lorem sem. Amet vestibulum dui ornare sodales eget. Ultrices pulvinar ligula hendrerit, condimentum nec, ultrices arcu enim lacinia, quam integer interdum a. 
+						Habitasse vestibulum vestibulum facilisi suscipit lacus in, diam tellus elementum, vehicula quis aspernatur pede lectus lobortis nec, sed class suspendisse mattis 
+						posuere arcu. Commodo tortor vitae ligula tempus egestas vivamus, vehicula pulvinar adipiscing consectetuer molestie augue orci, est felis etiam porttitor lorem, 
+						luctus at nunc nunc ullamcorper sem. Orci felis ipsum integer eget sit reiciendis. Phasellus nonummy aliquam leo est mattis suspendisse, ullamcorper laoreet 
+						vestibulum dolores pharetra vitae.
+						</p>
+					<h4>St. John 4:22-24</h4>
+						<p><b>22</b>Ye worship ye know not what: we know what we worship: for salvation is of the Jews.<br>
+						<b>23</b>But the hour cometh, and now is, when the true worshippers shall worship the Father in spirit and in truth: for the Father seeketh such to worship him.
+                        <b>24</b>God is a Spirit: and they that worship him must worship him in spirit and in truth.
+						</p>
+				</div>
+			</div>
+			<div class="col-sm-4">
+				<div class="Block">			<h2>Take part in the Ministries</h2>
+					<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+					  <div class="panel panel-default">
+						<div class="panel-heading" role="tab" id="headingOne">
+						  <h4 class="panel-title">
+							<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+							  Men Of Power<b class="caret"></b>
+							</a>
+						  </h4>
+						</div>
+						<div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+						  <div class="panel-body">
+							<h3 style="text-align:center;">Men of Power</h3>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. 
+							Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. 
+							Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft 
+							beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+						  </div>
+						</div>
+					  </div>
+					  <div class="panel panel-default">
+						<div class="panel-heading" role="tab" id="headingTwo">
+						  <h4 class="panel-title">
+							<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+								Women Of Power<b class="caret"></b>
+							</a> 
+						  </h4> 
+						</div>
+						<div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+						  <div class="panel-body">
+							<h3 style="text-align:center;">Women of Power</h3>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. 
+							Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes 
+							anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+						  </div>
+						</div>
+					  </div>
+					  <div class="panel panel-default">
+						<div class="panel-heading" role="tab" id="headingThree">
+						  <h4 class="panel-title">
+							<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+							  Youth Ministry<b class="caret"></b>
+							</a>
+						  </h4>
+						</div>
+						<div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+						  <div class="panel-body">
+							<h3 style="text-align:center;">Youth Ministry</h3>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. 
+							Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt 
+							sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+						  </div>
+						</div>
+					  </div>
+					  <div class="panel panel-default">
+						<div class="panel-heading" role="tab" id="headingFour">
+						  <h4 class="panel-title">
+							<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+								Marriage Ministry<b class="caret"></b>
+							</a> 
+						  </h4> 
+						</div>
+						<div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+						  <div class="panel-body">
+							<h3 style="text-align:center;">Marriage Ministry</h3>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. 
+							Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes 
+							anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+						  </div>
+						</div>
+					  </div>
+					  <div class="panel panel-default">
+						<div class="panel-heading" role="tab" id="headingFive">
+						  <h4 class="panel-title">
+							<a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+								Singles Ministry<b class="caret"></b>
+							</a> 
+						  </h4> 
+						</div>
+						<div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+						  <div class="panel-body">
+							<h3 style="text-align:center;">Singles Ministry</h3>Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. 
+							Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes 
+							anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+						  </div>
+						</div>
+					  </div>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+				<div class="Block">
+					<h2>Guess speaking</h2>
+					<iframe src="https://www.google.com/calendar/embed?src=millz9226%40yahoo.com&ctz=America/New_York" style="border: 0; border-radius: 5px;" width="100%" height="600px" frameborder="0" scrolling="no"></iframe>
+				</div>
+			</div>
+		</div>
+
+
+	
+		<script src="js/jquery-1.11.1.min.js"></script>
+		<script src="js/bootstrap.js"></script>
+	
+</body>
+
+
+</html>
+
+<?php
+unset($_SESSION['errors']);
+
+
+?>
+
